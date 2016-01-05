@@ -1,0 +1,9 @@
+Vue模块构建测试
+以下是每个目录的职责
+/build：存放webpack打包后的文件，可以直接引用
+/config：存放webpack配置文件，遵循commonJS规范，命名请用module.config.js，即对应module的打包配置
+配置方式请参考base.config.js，文档请参考http://webpack.github.io/docs/configuration.html
+/node_modules：存放node模块，不要提交
+/src：存放源文件，包括vue模块，css，js等，也是主要修改和提交的地方
+/package.json：包描述文件
+所有js文件均可使用es6，打包时会自动生成对应的es5代码，css可以使用stylus,sass(待支持),less(待支持)
