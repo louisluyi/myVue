@@ -1,4 +1,4 @@
-<template>
+ï»¿<template>
 	<div class="auto-complete-container">
 		<input type="text" class="input" /><slot name="button"></slot>
 		<ul class="auto-complete-list">
@@ -7,7 +7,7 @@
 				<span v-if="item.rightText" class="right-text">{{item.rightText}}</span>
 				<span v-if="item.history">{{item.history}}</span>
 				<span v-if="item.history" class="operation">
-					<em>ÀúÊ·¼ÇÂ¼</em><a href="javascript:void(0);" v-on="click:deleteHistory($index)">É¾³ı</a>
+					<em>å†å²è®°å½•</em><a href="javascript:void(0);" v-on="click:deleteHistory($index)">åˆ é™¤</a>
 				</span>
 				<input type="hidden" class="value" v-model="item.value" />
 			</li>
