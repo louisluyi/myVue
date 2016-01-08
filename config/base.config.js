@@ -18,7 +18,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: "style!css"
+        loader: "less!style!css"
       },
       {
         // edit this for additional asset file types

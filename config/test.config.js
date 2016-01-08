@@ -3,9 +3,9 @@
  */
 var baseConfig = require('./base.config.js');
 
-baseConfig.entry = './src/autoComplete/index.js';
+baseConfig.entry = './src/test/index.js';
 baseConfig.output = {
-    path: './build/autoComplete',
+    path: './build/test',
     filename: 'index.js'
 }
 module.exports = baseConfig;

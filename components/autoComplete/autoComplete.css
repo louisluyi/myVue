@@ -1,6 +1,12 @@
 .disnone{
     display: none;
 }
+.auto-complete-container{
+    position: relative;
+}
+.auto-complete-container .input{
+
+}
 .auto-complete-list > li{
     padding:6px 10px;
     line-height:1.2;
