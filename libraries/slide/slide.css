@@ -1,0 +1,26 @@
+.slide-container{
+    position:relative;
+    overflow: hidden;
+}
+.slide-container > .slide-list{
+    position:absolute;
+    left:0;
+    top:0;
+    width:20000px;
+    height:100%;
+}
+.slide-container > .slide-btn-list{
+    position:absolute;
+    left:50%;
+    bottom:15px;
+}
+.slide-container > .slide-btn-list > .slide-btn{
+    float: left;
+    margin-right:10px;
+    width:10px;
+    height:10px;
+    background: url(../../repair/v1.0.0/img/homepage/small-icon.png) no-repeat -7px -123px scroll;
+}
+.slide-container > .slide-btn-list > .current-btn {
+    background: url(../../repair/v1.0.0/img/homepage/small-icon.png) no-repeat -7px -102px scroll;
+}
