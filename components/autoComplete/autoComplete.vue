@@ -10,7 +10,7 @@
 				<span v-if="item.rightText" class="right-text">{{item.rightText}}</span>
 				<span v-if="item.history">{{item.history}}</span>
 					<span v-if="item.history" class="operation">
-						<em>历史记录</em><a href="javascript:void(0);" @click.stop="clickDelete($index)">删除</a>
+						<em class="tip">历史记录</em><a href="javascript:void(0);" class="delete-this" @click.stop="clickDelete($index)">删除</a>
 					</span>
 				<input type="hidden" class="value" v-model="item.value" />
 			</li>
@@ -21,7 +21,7 @@
 	</div>
 </template>
 <script>
-	require('./autoComplete.css');
+	require('./autoComplete.styl');
 	var lastValue = '',
 		timer;
 	module.exports = {
@@ -93,7 +93,10 @@
 				this.selectedThisItem(i);
 			},
 			clickDelete:function(i){
-
+				var obj = this.dataList[i];
+				this.dataList.splice(i, 1);
+				console.log(obj);
+				this.$dispatch('delete-history', obj);
 			},
 			createTimer:function(){
 				var self = this;

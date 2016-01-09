@@ -1,0 +1,74 @@
+inputWidth = 300px;
+inputHeight = 30px;
+redColor = #c00;
+border = 1px solid #999;
+border-box(){
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+.auto-complete-container{
+  position: relative;
+  .input{
+    float: left;
+    width:inputWidth;
+    height:inputHeight;
+    border:2px solid redColor;
+    line-height:inputHeight;
+    font-size:small;
+    text-indent: 8px;
+    outline:0;
+  }
+  .auto-complete-list{
+    position:absolute;
+    left:0;
+    top:inputHeight + 4px;
+    width:inputWidth + 2px;
+    border-left:border;
+    border-right:border;
+    border-bottom:border;
+    li{
+      padding:5px 10px;
+      line-height:1.2;
+      overflow: hidden;
+      .left-text{
+        float: left;
+        color:#333;
+      }
+      .right-text{
+        float: right;
+        color:#f60;
+      }
+      .history-value{
+        color:#39f;
+      }
+      .operation{
+        float: right;
+        width:50px;
+        font-size:12px;
+        text-align: right;
+        text-decoration: none;
+        font-style:normal;
+        .tip{
+          color:#999;
+        }
+        .delete-this{
+          display: none;
+          color:blue;
+        }
+      }
+      .operation:hover > .delete-this{
+        display: inline;
+      }
+      .operation:hover > .tip{
+        display: none;
+      }
+    }
+    .valid-item{
+      cursor:pointer;
+    }
+    .selected{
+      background-color:#efefef;
+    }
+  }
+}

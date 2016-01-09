@@ -11,7 +11,7 @@
     "webpack",
     "component"
   ],
-  "repository":"https://github.com/louisluyi/myVue.git",
+  "repository": "https://github.com/louisluyi/myVue.git",
   "dependencies": {
     "vue": "^1.0.13"
   },
@@ -20,9 +20,8 @@
     "babel-loader": "^6.1.0",
     "css-loader": "^0.23.0",
     "file-loader": "^0.8.4",
-    "less": "^2.5.3",
-    "less-loader": "^2.2.2",
     "style-loader": "^0.13.0",
+    "stylus-loader": "^1.4.3",
     "template-html-loader": "0.0.3",
     "url-loader": "^0.5.7",
     "vue-hot-reload-api": "^1.2.0",
