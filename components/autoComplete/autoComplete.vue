@@ -35,11 +35,11 @@
 			};
 		},
 		computed:{
-			/*input:{
-				set:function(value){
-					this.input = value.trim();
+			input:{
+				get:function(){
+					this.input = this.input.trim();
 				}
-			}*/
+			}
 		},
 		methods:{
 			mouseoutContainer:function(e){
@@ -78,6 +78,7 @@
 							lastValue = self.input;
 							self.$dispatch('input-change', lastValue, self.changeList);
 						}
+						break;
 				}
 			},
 			clickInput:function(){
