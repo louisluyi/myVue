@@ -1,7 +1,6 @@
 ﻿<template>
 	<div class="auto-complete-container" @mouseout="mouseoutContainer" @mouseover="mouseoverContainer">
-		<input type="text" class="input" v-model="input"
-			   @keyup="keyupInput" @click="clickInput"/>
+		<input type="text" class="input" v-model="input" @keyup="keyupInput" @click="clickInput"/>
 		<slot name="button"></slot>
 		<ul class="auto-complete-list" v-show="show && dataList.length > 0 || defaultText">
 			<li v-for="item in dataList" class="valid-item" :class="{'selected':$index == index}"
@@ -35,11 +34,11 @@
 			};
 		},
 		computed:{
-			input:{
-				get:function(){
-					this.input = this.input.trim();
+			/*input:{
+				set:function(value){
+					return value.trim();
 				}
-			}
+			}*/
 		},
 		methods:{
 			mouseoutContainer:function(e){
@@ -73,7 +72,8 @@
 						self.show = false;
 						self.$dispatch('output-value', self.input);
 						break;
-					default :
+					default:
+						self.input = self.input.trim();
 						if(lastValue !== self.input){
 							lastValue = self.input;
 							self.$dispatch('input-change', lastValue, self.changeList);
@@ -94,10 +94,10 @@
 				this.selectedThisItem(i);
 			},
 			clickDelete:function(i){
-				var obj = this.dataList[i];
-				this.dataList.splice(i, 1);
-				console.log(obj);
-				this.$dispatch('delete-history', obj);
+				var self = this;
+				var obj = self.dataList[i];
+				self.dataList.splice(i, 1);
+				self.$dispatch('delete-history', obj);
 			},
 			createTimer:function(){
 				var self = this;

@@ -1,6 +1,8 @@
 /**
  * Created by luyi on 2016/1/8.
  */
+
+"use strict";
 var Vue = require('vue');
 var searchAutoComplete = require('../../components/autoComplete/autoComplete.vue');
 require('../../css/test/index.styl');
